@@ -7,7 +7,7 @@
 ## Core Features
 
 ### 1. **User Registration**
-- **Endpoint**: `/auth/register`
+ 
 - **Functionality**: Allows users to sign up with their username, email, and password.
 - **Validation**:
   - Ensures a valid email format.
@@ -17,7 +17,7 @@
 ---
 
 ### 2. **User Login**
-- **Endpoint**: `/auth/login`
+ 
 - **Functionality**:
   - Enables users to log in with their credentials (username/email and password).
   - Issues a JWT token upon successful authentication.
@@ -26,13 +26,13 @@
 ---
 
 ### 3. **User Logout**
-- **Endpoint**: `/user-logout`
+ 
 - **Functionality**: Invalidates the JWT token, logging the user out securely.
 
 ---
 
 ### 4. **Get User Profile**
-- **Endpoint**: `/profile`
+ 
 - **Functionality**: Allows authenticated users to retrieve their profile information, including username, email, and roles.
 - **Security**: Accessible only to authenticated users.
 
