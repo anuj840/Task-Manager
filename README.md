@@ -104,11 +104,5 @@
 ```bash
 git clone https://github.com/anuj840/Task-Manager.git
 cd taskmanager
-
-## Author
-
-**Anuj Srivastava**
-
-- **Email**: anujsrivastava016@gmail.com  
-- **LinkedIn**:(https://www.linkedin.com/in/anujsrivastava016/))  
+ 
  
