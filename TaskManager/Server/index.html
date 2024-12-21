@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <script src="http://localhost:5000/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <ul id="taskList"></ul>
+<!-- 
+    <script>
+        const socket = io('http://localhost:5000');
+
+        // Listen for the 'taskAdded' event
+        socket.on('taskAdded', (task) => {
+            const taskList = document.getElementById('taskList');
+            const listItem = document.createElement('li');
+            listItem.textContent = `${task.title} - ${task.description}`;
+            taskList.appendChild(listItem);
+        });
+    </script> -->
+
+<script>
+    const socket = io('http://localhost:5000');
+
+    // Listen for the 'taskAdded' event (for new tasks)
+    socket.on('taskAdded', (task) => {
+        const taskList = document.getElementById('taskList');
+        const listItem = document.createElement('li');
+        listItem.textContent = `${task.title} - ${task.description}`;
+        taskList.appendChild(listItem);
+    });
+
+    // Listen for the 'taskUpdated' event (for updated tasks)
+    socket.on('taskUpdated', (updatedTask) => {
+        const taskList = document.getElementById('taskList');
+        let found = false;
+
+        // Loop through the list to find and update the existing task
+        taskList.querySelectorAll('li').forEach((item) => {
+            if (item.textContent.includes(updatedTask.title)) {
+                item.textContent = `${updatedTask.title} - ${updatedTask.description}`;
+                found = true;
+            }
+        });
+
+        // If the task was not found, add a new task
+        if (!found) {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${updatedTask.title} - ${updatedTask.description}`;
+            taskList.appendChild(listItem);
+        }
+    });
+</script>
+
+</body>
+</html>

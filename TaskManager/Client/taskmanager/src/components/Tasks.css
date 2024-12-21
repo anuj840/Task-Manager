@@ -1,0 +1,61 @@
+/* Scope all styles under the 'tasks-page' class */
+ 
+  
+  .tasks-page h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4A4A4A;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tasks-page .spinner-border {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .tasks-page .card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .tasks-page .card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tasks-page .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .tasks-page .badge {
+    font-size: 0.85rem;
+  }
+  
+  .tasks-page .bg-warning {
+    background-color: #FFC107 !important;
+    color: #212529;
+  }
+  
+  .tasks-page .bg-info {
+    background-color: #17A2B8 !important;
+    color: #FFF;
+  }
+  
+  .tasks-page .bg-success {
+    background-color: #28A745 !important;
+    color: #FFF;
+  }
+  
+  .tasks-page .form-select {
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .tasks-page .form-select:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+  }
+  
