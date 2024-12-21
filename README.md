@@ -72,10 +72,11 @@ TaskManager is a task management system that allows users to manage their tasks,
 ### 5. **Search and Filtering**
 - **Functionality**: Implement search and filtering for tasks based on various criteria (e.g., status, priority ).
 - **Performance**: Ensure efficient querying and indexing for optimal performance.
-
----
+- 
 ### 6. **Swagger UI **
 Swagger UI available at http://localhost:5000/api-docs
+---
+
 ## Setup Instructions
 
 ### 1. **Clone the Repository**
